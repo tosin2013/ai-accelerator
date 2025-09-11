@@ -12,7 +12,7 @@ spec:
   project: cluster-config
   source:
     path: patch-me-see-overlays
-    repoURL: https://github.com/tosin2013/ai-accelerator.git.git
+    repoURL: https://github.com/tosin2013/ai-accelerator.git
     targetRevision: main
   syncPolicy:
     automated:
