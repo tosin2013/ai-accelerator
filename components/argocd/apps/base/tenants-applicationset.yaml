@@ -9,7 +9,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: 'https://github.com/tosin2013/ai-accelerator.git.git'  # Update me on fork
+      repoURL: 'https://github.com/tosin2013/ai-accelerator.git'  # Update me on fork
       revision: main
       directories:
       - path: tenants/*/*/overlays/patch-me-see-overlay
