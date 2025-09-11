@@ -1,11 +1,11 @@
-apiVersion: operators.core.os.com/v1alpha1
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: rhdh-operator
-  namespace: rhdh-operator
+  name: devspaces
+  namespace: openshift-operators # Correct namespace for AllNamespaces mode
 spec:
   channel: "stable"
   installPlanApproval: "Automatic"
-  name: "rhdh-operator"
+  name: "devspaces"
   source: "redhat-operators"
   sourceNamespace: "openshift-marketplace"
