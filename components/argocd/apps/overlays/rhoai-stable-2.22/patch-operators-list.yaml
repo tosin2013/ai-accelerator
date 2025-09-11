@@ -61,6 +61,11 @@ spec:
         values:
           name: redhat-developer-hub-instance
           path: components/operators/redhat-developer-hub-operator/instance/overlays/default
+      - cluster: local
+        url: https://kubernetes.default.svc
+        values:
+          name: openshift-devspaces-instance
+          path: components/operators/devspaces/instance/overlays/default
       # - cluster: local
       #   url: https://kubernetes.default.svc
       #   values:
