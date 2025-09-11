@@ -25,6 +25,7 @@ replacements:
   # copy the repo from the application to the applicationsets
   - source:
       kind: Application
+      name: cluster-config-app-of-apps
       fieldPath: spec.source.repoURL
     targets:
       - select:
