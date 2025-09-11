@@ -6,6 +6,6 @@ metadata:
 spec:
   channel: "stable"
   installPlanApproval: "Automatic"
-  name: "rhdh-operator"
+  name: "rhdh"
   source: "redhat-operators"
   sourceNamespace: "openshift-marketplace"
