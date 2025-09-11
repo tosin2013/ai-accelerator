@@ -40,6 +40,7 @@ replacements:
   # copy the branch from the application to the applicationsets
   - source:
       kind: Application
+      name: cluster-config-app-of-apps
       fieldPath: spec.source.targetRevision
     targets:
       - select:
