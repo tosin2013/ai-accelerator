@@ -73,6 +73,8 @@ spec:
   nodeStatusExporter:
     enabled: true
   daemonsets:
+    nodeSelector:
+      nvidia.com/gpu.present: "true"
     rollingUpdate:
       maxUnavailable: '1'
     updateStrategy: RollingUpdate
