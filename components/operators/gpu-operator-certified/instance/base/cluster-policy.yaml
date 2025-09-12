@@ -70,6 +70,8 @@ spec:
       env:
         - name: WITH_WORKLOAD
           value: 'false'
+        - name: PATH
+          value: /usr/local/nvidia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   nodeStatusExporter:
     enabled: true
   daemonsets:
