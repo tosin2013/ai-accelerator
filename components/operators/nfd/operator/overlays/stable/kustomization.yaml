@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - ../../base
 - nfd-instance.yaml
+- nfd-master-service.yaml
 
 patches:
 - path: patch-channel.yaml
