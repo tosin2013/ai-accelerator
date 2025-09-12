@@ -57,6 +57,11 @@ spec:
         values:
           name: openshift-devspaces-instance
           path: components/operators/devspaces/instance/overlays/default
+      - cluster: local
+        url: https://kubernetes.default.svc
+        values:
+          name: nfd-operator-instance
+          path: components/operators/nfd-operator/instance/base
       # - cluster: local
       #   url: https://kubernetes.default.svc
       #   values:

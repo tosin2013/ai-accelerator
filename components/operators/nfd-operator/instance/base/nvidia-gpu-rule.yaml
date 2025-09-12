@@ -1,0 +1,13 @@
+apiVersion: nfd.openshift.io/v1alpha1
+kind: NodeFeatureRule
+metadata:
+  name: nvidia-gpu-rule
+spec:
+  rules:
+    - name: "NVIDIA GPU detection"
+      labels:
+        "nvidia.com/gpu": "true"
+      matchOn:
+        - feature: "pci.device"
+          matchExpressions:
+            vendor: {op: "In", value: ["10de"]}
