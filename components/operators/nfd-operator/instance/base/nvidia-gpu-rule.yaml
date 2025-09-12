@@ -11,3 +11,4 @@ spec:
         - feature: "pci.device"
           matchExpressions:
             vendor: {op: "In", value: ["10de"]}
+            class: {op: "In", value: ["0302"]}
