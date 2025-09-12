@@ -8,10 +8,11 @@ spec:
     configData: |
       core:
         labelWhiteList:
-          - "feature.node.kubernetes.io/pci-.*"
-          - "feature.node.kubernetes.io/cpu-.*"
-          - "feature.node.kubernetes.io/kernel-.*"
-          - "feature.node.kubernetes.io/system-.*"
+          patterns:
+            - "feature.node.kubernetes.io/pci-.*"
+            - "feature.node.kubernetes.io/cpu-.*"
+            - "feature.node.kubernetes.io/kernel-.*"
+            - "feature.node.kubernetes.io/system-.*"
         sleepInterval: 60s
   operand:
     namespace: openshift-nfd
