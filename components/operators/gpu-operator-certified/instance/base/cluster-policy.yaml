@@ -90,5 +90,5 @@ spec:
   vfioManager:
     enabled: true
   toolkit:
-    enabled: true
+    enabled: false
     installDir: /usr/local/nvidia
