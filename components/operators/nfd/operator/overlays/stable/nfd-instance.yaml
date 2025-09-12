@@ -7,13 +7,11 @@ spec:
   workerConfig:
     configData: |
       core:
-        labelWhiteList:
-          patterns:
-            - "feature.node.kubernetes.io/pci-.*"
-            - "feature.node.kubernetes.io/cpu-.*"
-            - "feature.node.kubernetes.io/kernel-.*"
-            - "feature.node.kubernetes.io/system-.*"
         sleepInterval: 60s
+      sources:
+        pci:
+          deviceClassWhitelist:
+            - "03"
   operand:
     namespace: openshift-nfd
     image: quay.io/openshift/origin-node-feature-discovery:4.12
