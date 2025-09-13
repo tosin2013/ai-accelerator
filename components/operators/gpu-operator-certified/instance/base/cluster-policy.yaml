@@ -92,6 +92,3 @@ spec:
   toolkit:
     enabled: true
     installDir: /usr/local/nvidia
-    env:
-    - name: PATH
-      value: /driver-root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
