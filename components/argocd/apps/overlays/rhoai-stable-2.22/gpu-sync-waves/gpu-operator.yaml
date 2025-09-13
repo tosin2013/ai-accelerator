@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/tosin2013/ai-accelerator.git
     targetRevision: main
-    path: components/operators/gpu-operator-certified/operator/overlays/stable
+    path: components/operators/gpu-operator-certified/operator/overlays/v24.9
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-operators
