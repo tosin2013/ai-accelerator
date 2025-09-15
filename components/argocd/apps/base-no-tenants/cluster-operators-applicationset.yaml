@@ -15,8 +15,7 @@ spec:
     metadata:
       name: '{{values.name}}'
       annotations:
-        argocd.argoproj.io/compare-options: IgnoreExtraneous
-        argocd.argoproj.io/sync-options: Prune=false
+        argocd.argoproj.io/sync-wave: "{{values.syncwave}}"
       labels:
         gitops: operator
     spec:
