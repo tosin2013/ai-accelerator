@@ -4,78 +4,83 @@ metadata:
   name: cluster-operators
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: authorino-operator
-          path: components/operators/authorino-operator/operator/overlays/stable
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-ai-operator
-          path: components/operators/openshift-ai/aggregate/overlays/stable-2.22
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-gitops-operator
-          path: components/operators/openshift-gitops/aggregate/overlays/rhdp
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-pipelines-operator
-          path: components/operators/openshift-pipelines/operator/overlays/latest
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-serverless-operator
-          path: components/operators/openshift-serverless/operator/overlays/stable
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-servicemesh-operator
-          path: components/operators/openshift-servicemesh/operator/overlays/stable
-      
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-devspaces
-          path: components/operators/devspaces/operator/overlays/stable
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: redhat-developer-hub-operator
-          path: components/operators/redhat-developer-hub-operator/operator/overlays/fast
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: redhat-developer-hub-instance
-          path: components/operators/redhat-developer-hub-operator/instance/overlays/default
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: openshift-devspaces-instance
-          path: components/operators/devspaces/instance/overlays/default
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: nfd-operator
-          path: components/operators/nfd/operator/overlays/stable
-          syncwave: "1"
-      - cluster: local
-        url: https://kubernetes.default.svc
-        values:
-          name: nfd-operator-instance
-          path: components/operators/nfd/operator/overlays/instance
-          syncwave: "2"
-      # - cluster: local
-      #   url: https://kubernetes.default.svc
-      #   values:
-      #     name: openshift-logging-operator
-      #     path: components/operators/openshift-logging/aggregate/overlays/default
-      # - cluster: local
-      #   url: https://kubernetes.default.svc
-      #   values:
-      #     name: web-terminal-operator
-      #     path: components/operators/web-terminal-operator/operator/overlays/fast
+    - list:
+        elements:
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: authorino-operator
+              path: components/operators/authorino-operator/operator/overlays/stable
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-ai-operator
+              path: components/operators/openshift-ai/aggregate/overlays/stable-2.22
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-gitops-operator
+              path: components/operators/openshift-gitops/aggregate/overlays/rhdp
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-pipelines-operator
+              path: components/operators/openshift-pipelines/operator/overlays/latest
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-serverless-operator
+              path: components/operators/openshift-serverless/operator/overlays/stable
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-servicemesh-operator
+              path: components/operators/openshift-servicemesh/operator/overlays/stable
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-devspaces
+              path: components/operators/devspaces/operator/overlays/stable
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: redhat-developer-hub-operator
+              path: components/operators/redhat-developer-hub-operator/operator/overlays/fast
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: redhat-developer-hub-instance
+              path: components/operators/redhat-developer-hub-operator/instance/overlays/default
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: openshift-devspaces-instance
+              path: components/operators/devspaces/instance/overlays/default
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: nfd-operator
+              path: components/operators/nfd/operator/overlays/stable
+              syncwave: "1"
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: nfd-operator-instance
+              path: components/operators/nfd/operator/overlays/instance
+              syncwave: "2"
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: nfd-operator-instance
+              path: components/operators/nfd/operator/overlays/instance
+              syncwave: "2"
+        # - cluster: local
+        #   url: https://kubernetes.default.svc
+        #   values:
+        #     name: openshift-logging-operator
+        #     path: components/operators/openshift-logging/aggregate/overlays/default
+        # - cluster: local
+        #   url: https://kubernetes.default.svc
+        #   values:
+        #     name: web-terminal-operator
+        #     path: components/operators/web-terminal-operator/operator/overlays/fast
