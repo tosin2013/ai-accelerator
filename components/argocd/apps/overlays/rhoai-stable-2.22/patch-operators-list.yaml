@@ -68,12 +68,6 @@ spec:
               name: nfd-operator-instance
               path: components/operators/nfd/operator/overlays/instance
               syncwave: "2"
-          - cluster: local
-            url: https://kubernetes.default.svc
-            values:
-              name: nfd-operator-instance
-              path: components/operators/nfd/operator/overlays/instance
-              syncwave: "2"
         # - cluster: local
         #   url: https://kubernetes.default.svc
         #   values:
