@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nfd-operator-instance
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: openshift-nfd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: components/operators/nfd/operator/overlays/instance
+    repoURL: https://github.com/tosin2013/ai-accelerator.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
