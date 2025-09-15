@@ -22,7 +22,7 @@ ocp_aws_create_gpu_machineset(){
   # https://aws.amazon.com/ec2/instance-types/dl1
   # 8 x gaudi:  dl1.24xlarge
 
-  INSTANCE_TYPE=${1:-g4dn.4xlarge}
+  INSTANCE_TYPE=${1:-g6.xlarge}
 
   ocp_aws_clone_machineset "${INSTANCE_TYPE}"
 
@@ -51,7 +51,7 @@ ocp_aws_clone_machineset(){
     usage: ocp_aws_create_gpu_machineset < instance type, default g4dn.4xlarge >
   "
 
-  INSTANCE_TYPE=${1:-g4dn.4xlarge}
+  INSTANCE_TYPE=${1:-g6.xlarge}
   MACHINE_SET=$(oc -n openshift-machine-api get machinesets.machine.openshift.io -o name | grep worker | head -n1)
 
   # check for an existing instance machine set
@@ -93,7 +93,7 @@ YAML
   done
 }
 
-INSTANCE_TYPE=${INSTANCE_TYPE:-g4dn.4xlarge}
+INSTANCE_TYPE=${INSTANCE_TYPE:-g6.xlarge}
 
 ocp_aws_cluster || exit 0
 ocp_aws_create_gpu_machineset ${INSTANCE_TYPE}
